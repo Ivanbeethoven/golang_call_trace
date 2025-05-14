@@ -1,0 +1,15 @@
+import (
+	"fmt"
+	"unsafe"
+)
+
+func getg() unsafe.Pointer
+
+func main() {
+	g := getg()
+	for offset := uintptr(152); offset <= 190; offset += 8 {
+		goid := *(*uint64)(unsafe.Pointer(uintptr(g) + offset))
+		fmt.Printf("Offset %d: ID %d\n", offset, goid)
+	}
+
+}
