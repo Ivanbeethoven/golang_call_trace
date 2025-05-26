@@ -1,0 +1,13 @@
+[package]
+name = "trace_syscalls_rust"
+version = "0.1.0"
+rust-version = "1.71"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+libbpf-rs = "0.24"
+libbpf-sys = "1.5.1"
+
+[build-dependencies]
+libbpf-cargo ="0.24"

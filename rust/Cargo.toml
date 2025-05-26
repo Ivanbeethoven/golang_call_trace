@@ -1,0 +1,17 @@
+[package]
+name = "golang_call_trace"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+ctrlc = "3.4.7"
+goblin = "0.9.3"
+libbpf-rs = "0.21.0"
+libbpf-sys = "1.5.0"
+libc = "0.2.172"
+
+
+
+[build-dependencies]
+libbpf-cargo = "0.21.0"
